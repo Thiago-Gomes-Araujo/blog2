@@ -15,13 +15,12 @@
   <tr>
       <td><%= category.name %> </td>
       <td>
-        <%# <div style="display: inline-block">
-          <%= link_to 'Show', category, class: 'btn btn-secondary' %>
         <div style="display: inline-block">
           <%= link_to 'Edit', edit_category_path(category), class: 'btn btn-primary' %>
         </div>
-        <div style="display: inline-block">
-          <%= button_to 'Destroy', category, method: :delete , class:'btn btn-danger'%>
+            <div style="display: inline-block">
+            <%= button_to 'Destroy', category, method: :delete,
+            data: { "turbo-confirm": 'Are you Sure?'}, class:'btn btn-danger'%>
         </div>
       </td>
   </tr>
