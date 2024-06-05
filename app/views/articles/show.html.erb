@@ -1,6 +1,8 @@
 <article class="blog-post">
     <h2 class="display-5 link-body-emphasis mb-1"><%= @article.title%></h2>
-    <p class="blog-post-meta"><%= date(@article.created_at)%> by <a href="#">Chris</a></p>
+    <p class="blog-post-meta">
+        <%= render 'article_detail', article: @article %>
+    </p>
     <p><%= @article.body %></p>
     <div style="display: inline-block; margin-top: 30px">
     <%= link_to 'Edit  ', edit_article_path(@article), class: 'btn btn-secondary' %>
